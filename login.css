@@ -1,0 +1,37 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ body { min-height: 100vh; background: linear-gradient(135deg, #050505, #170000, #050505); font-family: Arial, sans-serif; overflow: hidden; } 
+ 
+ /* LOGIN */ 
+ .login-container { height: 100vh; display: flex; justify-content: center; align-items: center; } .login-box { width: 350px; padding: 40px; text-align: center; background: rgba(0, 0, 0, 0.75); border: 2px solid #8b0000; box-shadow: 0 0 30px rgba(180, 0, 0, 0.5); border-radius: 10px; } 
+ .login-box h1 { color: white; font-size: 30px; margin-bottom: 10px; } 
+ .login-box p { color: #aaa; margin-bottom: 25px; } 
+ 
+ /* CAMPOS */ 
+ .login-box input { width: 100%; padding: 13px; margin-bottom: 15px; background: #111; border: 1px solid #555; color: white; outline: none; border-radius: 5px; }
+  .login-box input:focus { border-color: #c40000; box-shadow: 0 0 10px rgba(196, 0, 0, 0.5); }
+   
+  /* BOTÃO */ 
+   .login-box button { width: 100%; padding: 13px; background: #b30000; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .login-box button:hover { background: #e00000; box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); } /* LINK */ .login-box a { display: block; margin-top: 20px; color: #aaa; text-decoration: none; font-size: 14px; } 
+    .login-box a:hover { color: white; } /* ========================= */ /* TEIA */ /* ========================= */ 
+    #teia { position: fixed; width: 200vmax; height: 200vmax; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0); pointer-events: none; opacity: 0; z-index: 10; } 
+    
+    /* FIOS */
+    
+    .fio { position: absolute; width: 100%; height: 2px; background: white; left: 0; top: 50%; transform-origin: center; box-shadow: 0 0 8px white; }
+     .fio1 { transform: rotate(0deg); }
+      .fio2 { transform: rotate(30deg); } 
+      .fio3 { transform: rotate(60deg); } 
+      .fio4 { transform: rotate(90deg); } 
+      .fio5 { transform: rotate(120deg); } .fio6 { transform: rotate(150deg); }
+      
+      /* CÍRCULOS DA TEIA */ 
+      .circulo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 2px solid white; border-radius: 50%; box-shadow: 0 0 8px white; } 
+      .circulo1 { width: 20%; height: 20%; } 
+      .circulo2 { width: 35%; height: 35%; } 
+      .circulo3 { width: 50%; height: 50%; } 
+      .circulo4 { width: 65%; height: 65%; }
+      
+      /* ANIMAÇÃO */ #teia.ativa { animation: abrirTeia 1.5s ease-out forwards; } @keyframes abrirTeia { 0% { transform: translate(-50%, -50%) scale(0); opacity: 0; } 20% { opacity: 1; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
+
+
