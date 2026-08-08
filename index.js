@@ -10,7 +10,7 @@ botao.addEventListener("click", function () {
     // Depois da animação, vai para a página inicial
     setTimeout(function () {
 
-        window.location.href = "index.html";
+        window.location.href = "aranhaverso.html";
 
     }, 1500);
 
