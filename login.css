@@ -35,3 +35,108 @@
       /* ANIMAÇÃO */ #teia.ativa { animation: abrirTeia 1.5s ease-out forwards; } @keyframes abrirTeia { 0% { transform: translate(-50%, -50%) scale(0); opacity: 0; } 20% { opacity: 1; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
 
 
+/* POPUP */
+
+.popup {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 20;
+
+    transition: 0.4s;
+}
+
+.popup.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* CAIXA */
+
+.popup-box {
+    position: relative;
+
+    width: 350px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #080808;
+
+    border: 2px solid #b30000;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.5),
+        0 0 60px rgba(255, 0, 0, 0.2);
+
+    transform: scale(0.7);
+
+    transition: 0.4s;
+}
+
+.popup.ativo .popup-box {
+    transform: scale(1);
+}
+
+
+/* TÍTULO */
+
+.popup-box h2 {
+    color: white;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+}
+
+
+/* MENSAGEM */
+
+.popup-box p {
+    color: #ccc;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTÃO */
+
+.popup-box button {
+    padding: 12px 20px;
+
+    background: #b30000;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.popup-box button:hover {
+    background: #e00000;
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
